@@ -256,7 +256,7 @@ class Parser:
         normline = line.lower()
         if "created the game with a stack of" in line or "The admin approved" in line or "joined the game with a stack" in line:
             player_name = line.split('"')[1]
-            start_amount = int(line.split()[-1][:-1])
+            start_amount = float(line.split()[-1][:-1])
             self.evening.add_player(player_name, start_amount)
         elif line == "entry":
             pass
